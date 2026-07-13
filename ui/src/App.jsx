@@ -28,8 +28,8 @@ export default function App() {
   }
 
   return <main className="shell">
-    <nav><div className="brand"><span className="mark">◌</span><span>OpenContext</span></div><span className="nav-note">grounded retrieval lab</span></nav>
-    <section className="hero"><p className="eyebrow">OPEN SOURCE RAG</p><h1>Ask questions.<br /><em>Keep the context.</em></h1><p className="intro">A small, explainable retrieval layer for AI applications. Every answer below is assembled from indexed evidence.</p></section>
+    <nav><div className="brand"><span className="mark">◌</span><span>OpenContext</span></div><span className="nav-note">the GAV Insights engine</span></nav>
+    <section className="hero"><p className="eyebrow">OPEN SOURCE RAG ENGINE</p><h1>Ask questions.<br /><em>Keep the context.</em></h1><p className="intro">The open source retrieval engine behind GAV Insights. Every answer below is assembled from indexed evidence and returned with its provenance.</p></section>
     <section className="workspace">
       <div className="query-card"><div className="card-label">QUERY THE KNOWLEDGE BASE</div><form onSubmit={ask}><textarea value={query} onChange={(event) => setQuery(event.target.value)} placeholder="What would you like to understand?" rows="3" /><button disabled={busy}>{busy ? 'Retrieving…' : 'Retrieve context →'}</button></form><div className="examples">{examples.map((item) => <button key={item} onClick={() => setQuery(item)}>{item}</button>)}</div></div>
       {error && <div className="error">{error}</div>}

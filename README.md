@@ -1,5 +1,11 @@
 # OpenContext
 
+## The open source engine behind GAV Insights
+
+OpenContext is the retrieval and context engine that makes GAV Insights possible. It is the reusable, open source foundation responsible for loading documents, chunking content, generating embeddings, ranking evidence, and exposing grounded context through an API.
+
+GAV Insights adds business-specific orchestration, Power BI/Fabric integrations, and the executive experience on top of this kind of engine. OpenContext is intentionally independent: it contains no proprietary connectors, credentials, customer data, or GAV business rules.
+
 Grounded retrieval for explainable AI applications.
 
 OpenContext is a small, dependency-light RAG project for Markdown knowledge bases. It includes a Python library, a FastAPI service, and a React demo UI. The default mode is retrieval-only: every answer is assembled from indexed evidence and includes its source path, heading, excerpt, and score.

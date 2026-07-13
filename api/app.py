@@ -15,7 +15,11 @@ def build_app(service: OpenContextService | None = None) -> FastAPI:
     root = Path(__file__).resolve().parents[1]
     settings = OpenContextSettings.from_env(root)
     service = service or OpenContextService(LocalIndex(settings.db_path), settings.knowledge_root)
-    app = FastAPI(title=settings.api_title, version="0.1.0")
+    app = FastAPI(
+        title=settings.api_title,
+        description="The open source retrieval engine behind GAV Insights.",
+        version="0.1.0",
+    )
     app.state.opencontext = service
     app.add_middleware(
         CORSMiddleware,

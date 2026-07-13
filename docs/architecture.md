@@ -1,5 +1,16 @@
 # Architecture
 
+## Relationship to GAV Insights
+
+OpenContext is the open source engine layer behind GAV Insights. The boundary is deliberate:
+
+```text
+OpenContext engine                  GAV Insights application
+Markdown -> chunks -> evidence  ->  business context -> connectors -> executive answer
+```
+
+This repository demonstrates the general-purpose retrieval foundation. The private application can provide domain-specific sources, policies, orchestration, and presentation without changing the core contracts used here.
+
 ```text
 Markdown corpus -> loader -> chunker -> embeddings -> SQLite index
                                                    |

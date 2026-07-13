@@ -1,7 +1,7 @@
 [project]
 name = "opencontext"
 version = "0.1.0"
-description = "Grounded retrieval for explainable AI applications"
+description = "The open source retrieval engine behind GAV Insights"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
