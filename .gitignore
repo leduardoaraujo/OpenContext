@@ -1,3 +1,8 @@
-
-.worktrees/
-
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.opencontext/
+.env
+ui/node_modules/
+ui/dist/
